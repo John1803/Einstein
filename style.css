@@ -32,192 +32,65 @@ html {
 
 body {
   position: relative;
-  width: 1000px;
-  margin: 0 auto;
   min-height: 100%;
 }
 
-header {
-  height: 267px;
-  padding: 1px 0;
- }
-
-#singin {
-  position: absolute;
-  left: 50px;
-  top: 29px;
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
 }
 
-#singin #login,
-#singin #password {
-  display: block;
-  height: 7px;
-  width: 51px;
-  margin-left: 40px;
-}
-#singin #login {
-  margin-top: -11px;
-}
+.header { height:267px; overflow:hidden; position:relative; background:url("pictures/titleBackground.png") white center 0 no-repeat; }
 
-#singin #password {
-  margin-top: -12px;
-}
+.login { display:inline-block; margin-top:30px; color:#a9bdd4; font-size:60%; }
+.login input { width:51px; height:7px; display:block; margin-left:40px; margin-top:-11px; }
+.login button { margin-top:10px; color:blue; font-size:110%; text-decoration:underline; border:0; background:white; }
 
-#submit {
-  margin-top: 10px;
-}
+.contacts { position:absolute; right:0; top:30px; }
 
-#leftPointer {
-  position: absolute;
-  margin-top: 172px;
-  margin-left: 194px;
-  height: 15px;
-  width: 16px;
-}
+.rss,
+.links { bottom:60px; }
 
-#leftPointer:hover {
-  position: absolute;
-  height: 15px;
-  width: 16px;
-}
+.rss { position:absolute; left:50px; }
 
-#rightPointer {
-  position: absolute;
-  margin-top: 172px;
-  margin-left: 791px;
-  margin-right: 103px;
-  height: 15px;
-  width: 16px;
-}
+.links { position: absolute; right:0; }
 
-#rightPointer:hover {
-  position: absolute;
-  height: 15px;
-  width: 16px;
-}
+.links div { width:14px; height:13px; display:inline-block; margin-right:6px; cursor:pointer; background-image:url(pictures/links-sprite.png); }
+.links div:last-child { margin-right:0; }
+.links .print { background-position:-14px 0; }
+.print:hover { background-position:-14px -13px; }
+.links .mailto { background-position:0 0; }
+.mailto:hover { background-position:0 -13px; }
+.links .sitemap { background-position:-28px 0; }
+.sitemap:hover { background-position:-28px -13px; }
 
-#contacts {
-  position: absolute;
-  margin-top: 30px;
-  margin-left: 872px;
-  margin-right: 49px;
-}
 
-#rss {
-  position: absolute;
-  margin-top: 172px;
-  margin-left: 50px;
-}
-
-#print {
-  position: absolute;
-  margin-top: 175px;
-  margin-left: 895px;
-  height: 13px;
-  width: 14px;
-}
-
-#mailto {
-  position: absolute;
-  margin-top: 175px;
-  margin-left: 916px;
-  height: 13px;
-  width: 14px;
-}
-
-#sitemap {
-  position: absolute;
-  margin-top: 175px;
-  margin-left: 936px;
-  height: 13px;
-  width: 14px;
-}
-
-#languages {
-  position: relative;
-  margin: 135px auto;
-  width: 550px;
-  height: 53px;
-}
-
+.slider {  }
+.slider > div { display:inline-block; }
+.slides { width:550px; height:53px; position:relative; }
+.arrow { width:16px; height:15px; }
+.arrow.left  { background: url("pictures/Pointers/leftPointerInactive.png") no-repeat; }
+.arrow.left:hover { background: url("pictures/Pointers/leftPointerActive.png") no-repeat; }
+.arrow.right { background: url("pictures/Pointers/rightPointerInactive.png") no-repeat; }
+.arrow.right:hover { background: url("pictures/Pointers/rightPointerActive.png") no-repeat; }
+.slides > div span { min-width:50px; position:absolute; display:inline-block; margin-top:25px; margin-left:-20px; text-align:center; }
 #de, #es, #it,
 #en, #fr, #nl {
   position: absolute;
 }
+#de { margin-top: 10px; }
+#es { margin-top: 2px; margin-left: 90px; }
+#it { margin-left: 180px; }
+#en { margin-left: 280px; }
+#fr { margin-top: 2px; margin-left: 373px; }
+#nl { margin-top: 10px; margin-left: 463px; }
 
-#de {
-  margin-top: 10px;
- }
 
-#de span {
-  position: absolute;
-  margin-top: 25px;
-  margin-bottom: 100px;
-  margin-left: -10px;
-}
 
-#es {
-  margin-top: 2px;
-  margin-left: 90px;
-}
-
-#es span {
-  position: absolute;
-  margin-top: 27px;
-  margin-bottom: 100px;
-  margin-left: -15px;
-}
-
-#it {
-  margin-left: 180px;
-}
-
-#it span {
-  position: absolute;
-  margin-top: 25px;
-  margin-bottom: 100px;
-  margin-left: -20px;
-}
-
-#en {
-  margin-left: 280px;
-}
-
-#en span {
-  position: absolute;
-  margin-top: 25px;
-  margin-bottom: 100px;
-  margin-left: -15px;
-}
-
-#fr {
-  margin-top: 2px;
-  margin-left: 373px;
-}
-
-#fr span {
-    position: absolute;
-    margin-top: 27px;
-    margin-bottom: 100px;
-    margin-left: -20px;
-}
-
-#nl {
-  margin-top: 10px;
-  margin-left: 463px;
-}
-
-#nl span {
-  position: absolute;
-  margin-top: 25px;
-  margin-bottom: 100px;
-  margin-left: -20px;
-}
 
 .container {
   overflow: hidden;
-  width: 900px;
-  margin: 0 auto;
 }
 
 #verticalMenu {
@@ -266,12 +139,12 @@ header {
   display: inline-block;
   width: 9%;
   margin-right: 23px;
-  letter-spacing: -0.1em;
+  /*letter-spacing: -0.1em;*/
 }
 
 
 #footer {
-  background: url("Pictures/footer.png") no-repeat;
+  background: url("pictures/footer.png") no-repeat;
   position: absolute;
   margin: 0 50px;
   bottom: 0;
@@ -279,10 +152,6 @@ header {
   width: 100%;
 }
 /*Colors ******************************************************************************************************/
-header {
-  background: url("Pictures/titleBackground.png") white center no-repeat;
-}
-
 h2 {
   color: #0094d9;
 }
@@ -293,53 +162,6 @@ h3 {
 
 #content p {
   color: #4d8eb5;
-}
-
-#singin {
-  color: #a9bdd4;
-}
-
-#submit {
-  background: white;
-  color: blue;
-}
-
-#print {
-  background: url("Pictures/print.png") no-repeat;
-}
-#print:hover {
-  background: url("Pictures/printHover.png") no-repeat;
-}
-
-#mailto {
-  background: url("Pictures/mailto.png") no-repeat;
-}
-
-#mailto:hover {
-  background: url("Pictures/mailtoHover.png") no-repeat;
-}
-
-#sitemap {
-  background: url("Pictures/sitemap.png") no-repeat;
-}
-#sitemap:hover {
-  background: url("Pictures/sitemapHover.png") no-repeat;
-}
-
-#leftPointer {
-  background: url("Pictures/Pointers/leftPointerInactive.png") no-repeat;
-}
-
-#leftPointer:hover {
-  background: url("Pictures/Pointers/leftPointerActive.png") no-repeat;
-}
-
-#rightPointer {
-  background: url("Pictures/Pointers/rightPointerInactive.png") no-repeat;
-}
-
-#rightPointer:hover {
-  background: url("Pictures/Pointers/rightPointerActive.png") no-repeat;
 }
 
 #de, #es, #it,
@@ -356,15 +178,6 @@ body {
   font: 1em Times sans-serif;
 }
 
-#singin {
-  font-size: 60%;
-  letter-spacing: -0.1em;
-}
-
-#submit {
-  font-size: 110%;
-}
-
 #de, #es, #it,
 #en, #fr, #nl {
   font-size: 57%;
@@ -376,12 +189,12 @@ body {
 
 #verticalMenu {
   font-size: 70%;
-  letter-spacing: -0.1em;
+  /*letter-spacing: -0.1em;*/
 }
 
 #content h2 {
   font-size: 90%;
-  letter-spacing: -0.1em;
+  /*letter-spacing: -0.1em;*/
 }
 
 #content h3 {
@@ -402,11 +215,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-#submit {
-  border: 0;
-  text-decoration: underline;
 }
 
 a:hover, span:hover {
