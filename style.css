@@ -266,12 +266,12 @@ header {
   display: inline-block;
   width: 9%;
   margin-right: 23px;
-  letter-spacing: -0.1em;
+  letter-spacing: -.1em;
 }
 
 
 #footer {
-  background: url("Pictures/footer.png") no-repeat;
+  background: url(Pictures/footer.png) no-repeat;
   position: absolute;
   margin: 0 50px;
   bottom: 0;
@@ -280,7 +280,7 @@ header {
 }
 /*Colors ******************************************************************************************************/
 header {
-  background: url("Pictures/titleBackground.png") white center no-repeat;
+  background: url(Pictures/titleBackground.png) white center no-repeat;
 }
 
 h2 {
@@ -305,41 +305,41 @@ h3 {
 }
 
 #print {
-  background: url("Pictures/print.png") no-repeat;
+  background: url(Pictures/print.png) no-repeat;
 }
 #print:hover {
-  background: url("Pictures/printHover.png") no-repeat;
+  background: url(Pictures/printHover.png) no-repeat;
 }
 
 #mailto {
-  background: url("Pictures/mailto.png") no-repeat;
+  background: url(Pictures/mailto.png) no-repeat;
 }
 
 #mailto:hover {
-  background: url("Pictures/mailtoHover.png") no-repeat;
+  background: url(Pictures/mailtoHover.png) no-repeat;
 }
 
 #sitemap {
-  background: url("Pictures/sitemap.png") no-repeat;
+  background: url(Pictures/sitemap.png) no-repeat;
 }
 #sitemap:hover {
-  background: url("Pictures/sitemapHover.png") no-repeat;
+  background: url(Pictures/sitemapHover.png) no-repeat;
 }
 
 #leftPointer {
-  background: url("Pictures/Pointers/leftPointerInactive.png") no-repeat;
+  background: url(Pictures/Pointers/leftPointerInactive.png) no-repeat;
 }
 
 #leftPointer:hover {
-  background: url("Pictures/Pointers/leftPointerActive.png") no-repeat;
+  background: url(Pictures/Pointers/leftPointerActive.png) no-repeat;
 }
 
 #rightPointer {
-  background: url("Pictures/Pointers/rightPointerInactive.png") no-repeat;
+  background: url(Pictures/Pointers/rightPointerInactive.png) no-repeat;
 }
 
 #rightPointer:hover {
-  background: url("Pictures/Pointers/rightPointerActive.png") no-repeat;
+  background: url(Pictures/Pointers/rightPointerActive.png) no-repeat;
 }
 
 #de, #es, #it,
@@ -358,7 +358,7 @@ body {
 
 #singin {
   font-size: 60%;
-  letter-spacing: -0.1em;
+  letter-spacing: -.1em;
 }
 
 #submit {
@@ -376,12 +376,12 @@ body {
 
 #verticalMenu {
   font-size: 70%;
-  letter-spacing: -0.1em;
+  letter-spacing: -.1em;
 }
 
 #content h2 {
   font-size: 90%;
-  letter-spacing: -0.1em;
+  letter-spacing: -.1em;
 }
 
 #content h3 {
