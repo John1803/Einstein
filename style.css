@@ -26,25 +26,16 @@ ol, ul {
 
 /*Layouts *****************************************************************/
 
-html {
-  height: 100%;
-}
+html { height: 100%; }
 
-body {
-  position: relative;
-  min-height: 100%;
-}
+body { position: relative; height: 100%; }
 
-.wrapper {
-    width: 900px;
-    margin: 0 auto;
-    position: relative;
-}
+.wrapper { width: 900px; min-height: 100%; margin: 0 auto; position: relative; }
 
 .header { height:267px; overflow:hidden; position:relative; background:url("pictures/titleBackground.png") white center 0 no-repeat; }
 
 .login { display:inline-block; margin-top:30px; color:#a9bdd4; font-size:60%; }
-.login input { width:51px; height:7px; display:block; margin-left:40px; margin-top:-11px; }
+.login input { width:51px; height:7px; display:block; margin-left:40px; margin-top:-11px; border: 1px dotted #a9bdd4; border-radius: 2px; }
 .login button { margin-top:10px; color:blue; font-size:110%; text-decoration:underline; border:0; background:white; }
 
 .contacts { position:absolute; right:0; top:30px; }
@@ -66,7 +57,7 @@ body {
 .sitemap:hover { background-position:-28px -13px; }
 
 
-.slider {  }
+.slider { position: absolute; top: 135px; left: 150px; }
 .slider > div { display:inline-block; }
 .slides { width:550px; height:53px; position:relative; }
 .arrow { width:16px; height:15px; }
@@ -74,7 +65,8 @@ body {
 .arrow.left:hover { background: url("pictures/Pointers/leftPointerActive.png") no-repeat; }
 .arrow.right { background: url("pictures/Pointers/rightPointerInactive.png") no-repeat; }
 .arrow.right:hover { background: url("pictures/Pointers/rightPointerActive.png") no-repeat; }
-.slides > div span { min-width:50px; position:absolute; display:inline-block; margin-top:25px; margin-left:-20px; text-align:center; }
+.slides > div span { min-width:50px; position:absolute; display:inline-block; top:25px; left:15px; text-align:center; }
+
 #de, #es, #it,
 #en, #fr, #nl {
   position: absolute;
@@ -86,71 +78,66 @@ body {
 #fr { margin-top: 2px; margin-left: 373px; }
 #nl { margin-top: 10px; margin-left: 463px; }
 
-
-
-
 .container {
   overflow: hidden;
 }
 
-#verticalMenu {
+.leftVerticalMenu {
   float: left;
   width: 19.444444444%;
   padding-left: 10px;
 }
 
-#verticalMenu ul li {
-  margin-bottom: 1em;
-}
-
-#content {
+.content {
   float: left;
   width: 60%;
   padding-bottom: 30px;
 }
 
-#content div img {
+.content img {
   float: left;
 }
 
-#content h2,
-#content h3,
-#content p {
-  padding-left: 13%;
-}
-
-#content > div {
-  margin: 0 0 10px 0;
-}
-
-#einstein {
+.rightSidebar {
   float: right;
   width: 19.444444444%;
 }
 
-#horizontalMenu {
-  position: absolute;
-  margin: -50px 50px 50px 50px;
-  white-space: nowrap;
-  width: 90%;
+table {
+    width: 100%;
+    position: absolute;
+    top: 220px;
+    font-size: 70%;
+    white-space: nowrap;
+    border-spacing: 0;
 }
 
-#horizontalMenu ul li{
-  display: inline-block;
-  width: 9%;
-  margin-right: 23px;
-  /*letter-spacing: -0.1em;*/
-}
+.horizontalMenuStudy { width: 88px; }
+.horizontalMenuPrice { width: 61px; }
+.horizontalMenuBid { width: 74px; }
+.horizontalMenuAbout { width: 63px; }
+.horizontalMenuAnnouncement { width: 116px; }
+.horizontalMenuFiveSixteen { width:111px; }
+.horizontalMenuInCompanies { width: 101px; }
+.horizontalMenuAbroad { width:98px; }
+.horizontalMenuForum { width: 60px; }
+.horizontalMenuTest { width: 67px; text-align:center; }
+.horizontalMenuOnLine { text-align: right; }
 
+h2,
+.date,
+.text { margin-left: 70px }
 
-#footer {
-  background: url("pictures/footer.png") no-repeat;
-  position: absolute;
-  margin: 0 50px;
-  bottom: 0;
-  height: 28px;
-  width: 100%;
-}
+.date { color: #a9bdd4; }
+
+.text { font-size: 80%; color: #4d8eb5;}
+
+.footer { width: 900px; height: 28px; margin: 0 auto; background: url("pictures/footer.png") repeat-x; }
+
+a { color: #0094d9; text-decoration: none; }
+
+a:hover,
+span:hover { text-decoration: underline; }
 /*Colors ******************************************************************************************************/
 h2 {
   color: #0094d9;
@@ -160,7 +147,7 @@ h3 {
   color: #a9bdd4;
 }
 
-#content p {
+.article p {
   color: #4d8eb5;
 }
 
@@ -207,13 +194,10 @@ body {
 }
 
 /*Misc **********************************************************************************************************/
-#login,
-#password {
-  border: 1px dotted #a9bdd4;
-  border-radius: 2px;
-}
 
-a {
+
+a,
+a:link{
   text-decoration: none;
 }
 
