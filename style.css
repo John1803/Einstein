@@ -1,0 +1,128 @@
+/*CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, input, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/*Layouts *****************************************************************/
+
+html { height: 100%; }
+
+body { position: relative; height: 100%; font: 16px Times, Verdana, Tahoma sans-serif; }
+
+.wrapper { width: 900px; min-height: 100%; margin: 0 auto; position: relative; }
+
+.header { height:267px; overflow:hidden; position:relative; background:url("pictures/titleBackground.png") white center 0 no-repeat; }
+
+.login { display:inline-block; margin-top:30px; color:#a9bdd4; font-size:60%; }
+.login input { width:51px; height:7px; display:block; margin-left:40px; margin-top:-11px; border: 1px dotted #a9bdd4; border-radius: 2px; }
+.login button { margin-top:10px; color:blue; font-size:110%; text-decoration:underline; border:0; background:white; }
+
+.contacts { position:absolute; right:0; top:30px; text-align: right; font-size:60%; color:#a9bdd4;}
+
+.rss,
+.links { bottom:60px; }
+
+.rss { position:absolute; left:50px; }
+
+.links { position: absolute; right:0; }
+
+.links div { width:14px; height:13px; display:inline-block; margin-right:6px; cursor:pointer; background-image:url(pictures/links-sprite.png); }
+.links div:last-child { margin-right:0; }
+.links .print { background-position:-14px 0; }
+.print:hover { background-position:-14px -13px; }
+.links .mailto { background-position:0 0; }
+.mailto:hover { background-position:0 -13px; }
+.links .sitemap { background-position:-28px 0; }
+.sitemap:hover { background-position:-28px -13px; }
+
+
+.slider { position: absolute; top: 135px; left: 150px; }
+.slider > div { display:inline-block; }
+.slides { width:550px; height:53px; position:relative; font-size:70%; }
+.arrow { width: 16px; height: 15px; background: url(pictures/arrowsSprite.png) no-repeat;}
+.arrow.left  { background-position: -16px 0; }
+.left:hover { background-position: 0 0; }
+.arrow.right { background-position: -32px 0; }
+.right:hover { background-position: -48px 0 }
+.slides > div span { min-width:50px; position:absolute; display:inline-block; top:25px; left:15px; text-align:center; }
+
+#de, #es, #it, #en, #fr, #nl { position: absolute; color: #0094d9; }
+#de { top: 10px; }
+#es { top: 2px; left: 90px; }
+#it { left: 180px; }
+#en { left: 280px; }
+#fr { top: 2px; left: 373px; }
+#nl { top: 10px; left: 463px; }
+
+.container {overflow: hidden; }
+
+.leftVerticalMenu { float:left; width:19.444444444%; padding-left:10px; font-size:85%; }
+
+.content { float: left; width: 60%; padding-bottom: 30px; }
+
+.content img { float: left; }
+
+.rightSidebar { float: right; width: 19.444444444%; }
+
+table {
+    width: 100%;
+    position: absolute;
+    top: 220px;
+    font-size: 70%;
+    white-space: nowrap;
+    border-spacing: 0;
+    color: #0094d9;
+}
+
+.horizontalMenuStudy { width: 88px; }
+.horizontalMenuPrice { width: 61px; }
+.horizontalMenuBid { width: 74px; }
+.horizontalMenuAbout { width: 63px; }
+.horizontalMenuAnnouncement { width: 116px; }
+.horizontalMenuFiveSixteen { width:111px; }
+.horizontalMenuInCompanies { width: 101px; }
+.horizontalMenuAbroad { width:98px; }
+.horizontalMenuForum { width: 60px; }
+.horizontalMenuTest { width: 67px; text-align:center; }
+.horizontalMenuOnLine { text-align: right; }
+
+h2,
+.date,
+.text { margin-left: 70px }
+
+h2 { color: #0094d9; }
+
+.date { font-size: 50%; color: #a9bdd4; }
+
+.text { font-size: 80%; color: #4d8eb5;}
+
+.footer { width: 900px; height: 28px; margin: 0 auto; background: url("pictures/footer.png") repeat-x; }
+
+a { color: #0094d9; text-decoration: none; }
+
+a:hover,
+span:hover { text-decoration: underline; }
+
+a,
+a:link{ text-decoration: none; }
