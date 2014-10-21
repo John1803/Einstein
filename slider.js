@@ -36,7 +36,7 @@ $(document).ready(function () {
             }
         });
 
-        slides.children().last().appendTo(slides);
+        slides.children().last().prependTo(slides);
     }
 
 });
