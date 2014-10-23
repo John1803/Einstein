@@ -1,42 +1,49 @@
-$(document).ready(function () {
+//var Slider.prototype
+(function($) {
 
-    $(".arrow.left").click(function() {
-        changePositionLeft();
-    });
+    var Slider = function(container, options) {
+        $.extend(this.settings, options);
+        var that = this;
+        $(container).each(function() {
+            that.addHandlers($(this), options);
+        });
+    };
 
-    $(".arrow.right").click(function() {
-        changePositionRight();
-    });
-    
-    function changePositionLeft() {
+    Slider.prototype.settings = {
+        duration: 300,
+        nav: {
+            selector: ".arrow",
+            left: "left",
+            right: "right"
+        },
+        slidesContainer: ".slides"
+    };
 
-        var slides = $('.slides');
+    Slider.prototype.addHandlers = function($container) {
+        $container.find(this.settings.nav.selector).click({that: this}, this.slide);
+    };
 
-        slides.children().each( function(index, child) {
-            if (index == 0) {
-                $(child).animate(slides.children().last().position());
-            }
-            else {
-                $(child).animate(slides.children().eq(index - 1).position());
+    Slider.prototype.slide = function(event) {
+        var that = event.data.that;
+        var moveLeft = $(this).hasClass(that.settings.nav.left);
+
+        var $slides = $(that.settings.slidesContainer).children();
+        if (moveLeft) {
+            $slides = $($slides.get().reverse());
+        }
+
+        $slides.each(function(index, child) {
+            if (index == $slides.length - 1) {
+                $(child).animate($slides.first().position(), that.settings.duration);
+            } else {
+                $(child).animate($slides.eq(index + 1).position(), that.settings.duration);
             }
         });
+//        slides.children().first().appendTo(slides);
+    };
 
-        slides.children().first().appendTo(slides);
-    }
-    function changePositionRight() {
-
-        var slides = $('.slides');
-
-        slides.children().each( function(index, child) {
-            if (index == 5) {
-                $(child).animate(slides.children().first().position());
-            }
-            else {
-                $(child).animate(slides.children().eq(index + 1).position());
-            }
-        });
-
-        slides.children().last().prependTo(slides);
-    }
-
-});
+//console.log(typeof foo.addHandlers);
+    $.fn.slider = function(options) {
+        new Slider(this, options)
+    };
+}(jQuery));

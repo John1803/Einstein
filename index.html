@@ -4,6 +4,8 @@
     <title>Megapolis</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="slider.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -33,7 +35,7 @@
                 <div class="mailto"></div>
                 <div class="sitemap"></div>
             </div>
-            <div class="slider">
+            <div class="slider" id="slider">
                 <div class="arrow left"></div>
                 <div class="slides">
                     <div id="de"><a href=""><img src="pictures/Flags/Germany.png" alt="Немецкий"><span>Немецкий</span></a></div>
@@ -45,6 +47,15 @@
                 </div>
                 <div class="arrow right"></div>
             </div>
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#slider").slider({
+                        duration: 300
+                    });
+                });
+//                $(".arrow.left").click(changePositionLeft);
+//                $(".arrow.right").click(changePositionRight);
+            </script>
         </div>
         <table>
             <tbody>
@@ -110,7 +121,5 @@
         </div>
     </div>
     <div class="footer"></div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="slider.js"></script>
 </body>
 </html>
