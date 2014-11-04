@@ -1,0 +1,35 @@
+SELECT	CONCAT_WS(  ' ', actors.name, actors.surname ) AS Actor, 
+	SUM( fee ) AS Fees 
+FROM actors 
+JOIN movies_actors ON actors.id = movies_actors.actor_id 
+WHERE ( YEAR( CURDATE( ) ) - YEAR( birthday ) ) - ( RIGHT( CURDATE( ) , 5 ) < RIGHT( birthday, 5 ) )  BETWEEN 40  AND 60  
+GROUP BY actors.name;
+
+SELECT	filmstudios.title AS FILMSTUDIO, 
+	CONCAT_WS(  ' ', actors.name, actors.surname ) AS 'Actor', 
+	COUNT( movies.id ) AS 'Number of movies'  
+FROM filmstudios 
+JOIN filmstudios_movies ON filmstudios.id = filmstudios_movies.filmstudio_id 
+JOIN movies ON movies.id = filmstudios_movies.movie_id 
+JOIN movies_actors ON movies.id = movies_actors.movie_id 
+JOIN actors ON actors.id = movies_actors.actor_id 
+GROUP BY filmstudios.id, actors.id 
+ORDER BY filmstudios.title;
+
+SELECT CONCAT_WS(' ', name, surname) AS Actor 
+FROM actors 
+WHERE surname IN (SELECT surname FROM actors GROUP BY surname HAVING COUNT(surname) < 2) 
+ORDER BY name;
+
+SELECT	filmstudios.title AS Filmstudio, 
+	COUNT( DISTINCT movies.id ) AS  'Number of movies', 
+	COUNT( movies_actors.movie_id ) AS  'Number of fees', 
+	SUM( movies_actors.fee ) AS  'Total fee', 
+	AVG( movies_actors.fee ) AS  'Average fee' 
+FROM filmstudios 
+JOIN filmstudios_movies ON filmstudios.id = filmstudios_movies.filmstudio_id 
+JOIN movies ON movies.id = filmstudios_movies.movie_id 
+JOIN movies_actors ON movies.id = movies_actors.movie_id 
+WHERE movies.created >= ( SUBDATE( CURDATE( ) , INTERVAL 10 YEAR ) )
+GROUP BY filmstudios.id 
+ORDER BY filmstudios.title;
